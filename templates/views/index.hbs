@@ -3,9 +3,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Music player</title>
   </head>
-  <body>
-
+  <body class="container">
+    <div class="form-outline my-2">
+      <input type="text" id="searchBar" class="form-control" />
+      <label class="form-label" for="searchBar">Search song</label>
+    </div>
+    <button
+      type="button"
+      id="findBtn"
+      class="btn btn-primary btn-lg btn-block"
+    >Find</button>
+    <div class="contentHolder row"></div>
+    <div
+      class="ng-scope py-2"
+      ng-app="genius.apple_music_player"
+      id="musicPlayer"
+    >
+    </div>
   </body>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+  ></script>
+  <script type="module" src="./js/app.js"></script>
 </html>
