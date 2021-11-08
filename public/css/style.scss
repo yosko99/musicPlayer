@@ -58,3 +58,15 @@
 .alert {
   display: none;
 }
+
+.heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+}
