@@ -14,8 +14,8 @@ const getSong = (songID, callback) => {
     axios.request(options).then(function (response) {
         const { response: { song: { apple_music_player_url: playerUrl } } } = response.data;
         axios.get(playerUrl).then((scrapedData) => {
-            const head = scrapedData.data.match(/<head>((.|\n)*?)<\/head>/, "gm");
-            const player = scrapedData.data.match(/<apple-music-player .*>(.|\n)*?<\/apple-music-player>/, "gm");
+            const head = scrapedData.data.match(/<head>((.|\n)*?)<\/head>/, "gm")[1];
+            const player = scrapedData.data.match(/<apple-music-player .*>(.|\n)*?<\/apple-music-player>/, "gm")[0];
             callback({ head, player });
         }).catch((err) => {
             callback(err);

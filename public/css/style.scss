@@ -33,6 +33,22 @@
   }
 }
 
+#musicPlayer {
+  display: none;
+}
+
 .apple_music_player_container--border {
   height: 50px !important;
+}
+
+#spinner {
+  justify-content: center;
+  display: none;
+  text-align: center;
+
+  img {
+    margin-top: 1em;
+    width: 50px;
+    height: 50px;
+  }
 }

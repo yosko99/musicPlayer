@@ -15,14 +15,13 @@ const importData = (response, checkHead) => {
 
     $(".card img").on("click", function () {
         const id = $(this).parent().parent().attr("id");
-        fetchSong(id, (data) => {
+        fetchSong(id, ({ head, player }) => {
             if (checkHead === false) {
-                $(data.head[1]).appendTo("head");
-                $("#musicPlayer").html(data.player[0]);
+                $(head).appendTo("head");
+                $("#musicPlayer").html(player).show("slow");
                 checkHead = true;
             } else {
-                // $("#musicPlayer").empty();
-                $(data.player[0]).appendTo("#musicPlayer");
+                $(player).appendTo("#musicPlayer");
             }
         })
     })
