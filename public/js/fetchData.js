@@ -5,9 +5,6 @@ const fetchData = (value) => {
         type: "get",
         url: `/search?search=${value}`,
         dataType: "json",
-        beforeSend: function () {
-            $(".contentHolder").hide("fast").empty();
-        },
         success: function (response) {
             importData(response);
         },
