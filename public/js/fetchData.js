@@ -1,6 +1,6 @@
 import importData from "./importData.js"
 
-const fetchData = (value, checkHead) => {
+const fetchData = (value) => {
     $.ajax({
         type: "get",
         url: `/search?search=${value}`,
@@ -9,7 +9,7 @@ const fetchData = (value, checkHead) => {
             $(".contentHolder").hide("fast").empty();
         },
         success: function (response) {
-            importData(response, checkHead);
+            importData(response);
         },
         fail: function (err) {
             console.log(err);

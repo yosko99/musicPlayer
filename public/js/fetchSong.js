@@ -4,6 +4,7 @@ const fetchSong = (id, callback) => {
         url: `/songs?song=${id}`,
         dataType: "json",
         beforeSend : function(){
+            $("#player").hide("slow");
             $("#spinner").show("slow");
         },
         success: function (response) {

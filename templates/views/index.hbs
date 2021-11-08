@@ -24,12 +24,14 @@
       id="findBtn"
       class="btn btn-primary btn-lg btn-block"
     >Find</button>
-    <div class="contentHolder row"></div>
-    <div
-      class="ng-scope py-2"
-      ng-app="genius.apple_music_player"
-      id="musicPlayer"
-    >
+    <div class="contentHolder"></div>
+
+    <div id="player">
+      <div id="nowPlaying" class="text-center fs-5">
+        <p>Now Playing</p>
+        <p id="currentSong"></p>
+      </div>
+      <audio controls autoplay id="musicPlayer"> </audio>
     </div>
     <div id="spinner">
       <img src="./img/spinner.gif" />

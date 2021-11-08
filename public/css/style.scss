@@ -1,12 +1,15 @@
 .contentHolder {
   display: grid;
-  // grid-template-columns: repeat(5, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
-.card:hover {
-  transform: scale(1.05);
+.card {
+  transform: scale(1);
   transition: transform 250ms;
+}
+
+.card:hover {
+  transform: scale(1.01);
 }
 
 .cardBackground {
@@ -18,27 +21,26 @@
   align-items: center;
 
   img {
-    display: none;
-  }
-
-  img:hover {
+    transition: all 200ms ease-in-out;
     cursor: pointer;
+    opacity: 0;
   }
 }
 
 .cardBackground:hover {
   img {
     opacity: 0.5;
-    display: block;
   }
 }
 
-#musicPlayer {
+#player {
+  margin-top: 1em;
+  width: 100%;
   display: none;
-}
 
-.apple_music_player_container--border {
-  height: 50px !important;
+  #musicPlayer {
+    width: 100%;
+  }
 }
 
 #spinner {
